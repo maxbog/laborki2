@@ -1,0 +1,3 @@
+env = Environment(tools = ['mingw'])
+env['CPPFLAGS'] = '-g -Wall -pedantic -ansi'
+env.Program(source = ['main.cc', 'zad2.cc'])
