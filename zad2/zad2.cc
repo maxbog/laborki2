@@ -86,7 +86,7 @@ ciag operator+(const ciag& str1, const ciag& str2) {
 
 istream& operator>>(istream& is, ciag& cg) {
   char bufor[512];
-  is >> bufor;
+  is.getline(bufor,512);
   cg._dane = new char[ciag::strlen(bufor)+1];
   ciag::strcpy(cg._dane, bufor);
   return is;
