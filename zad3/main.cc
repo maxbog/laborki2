@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file main.cc
  * @author Maksymilian Boguń
  * @date 8-3-2009

@@ -1,84 +1,84 @@
 // -*- mode: C++ -*-
 /**
  * @file zad2.h
- * @author Maksymilian Boguñ
+ * @author Maksymilian BoguÅ„
  * @date 9-3-2009
  */
 
 #include <iostream>
 
 /**
- * Reprezentuje ci±g znaków.
- * Brak ograniczeñ co do d³ugo¶ci, poza wielko¶ci± pamiêci :)
+ * Reprezentuje ciÄ…g znakÃ³w.
+ * Brak ograniczeÅ„ co do dÅ‚ugoÅ›ci, poza wielkoÅ›ciÄ… pamiÄ™ci :)
  * 
  */
 class ciag {
 public:
     /**
-     * Konstruktor domy¶lny.
-     * Tworzy ci±g o d³ugo¶ci 0.
+     * Konstruktor domyÅ›lny.
+     * Tworzy ciÄ…g o dÅ‚ugoÅ›ci 0.
      * 
      */
     ciag();
     /** 
-     * Konstruktor konwertuj±cy z ci±gu znaków C.
-     * Dane s± kopiowane, oryginalny ci±g pozostaje nienaruszony.
+     * Konstruktor konwertujÄ…cy z ciÄ…gu znakÃ³w C.
+     * Dane sÄ… kopiowane, oryginalny ciÄ…g pozostaje nienaruszony.
      * 
-     * @param cstr Ciag znakowy jêzyka C.
+     * @param cstr Ciag znakowy jÄ™zyka C.
      */
     ciag(const char* cstr);
     /** 
-     * Konstruktor kopiuj±cy.
-     * Tworzy g³êbok± kopiê ci±gu - wszystkie dane s± kopiowane.
+     * Konstruktor kopiujÄ…cy.
+     * Tworzy gÅ‚Ä™bokÄ… kopiÄ™ ciÄ…gu - wszystkie dane sÄ… kopiowane.
      * 
-     * @param inny Ci±g, który zostanie skopiowany
+     * @param inny CiÄ…g, ktÃ³ry zostanie skopiowany
      */
     ciag(const ciag& inny);
     /** 
      * Destruktor.
-     * Zwalnia pamiêæ u¿ywan± przez ci±g znaków.
+     * Zwalnia pamiÄ™Ä‡ uÅ¼ywanÄ… przez ciÄ…g znakÃ³w.
      * 
      */
     ~ciag();
 
     /**
-     * Zwraca d³ugo¶æ ciagu znaków.
+     * Zwraca dÅ‚ugoÅ›Ä‡ ciagu znakÃ³w.
      *
-     * @return D³ugo¶æ ci±gu znaków. 
+     * @return DÅ‚ugoÅ›Ä‡ ciÄ…gu znakÃ³w. 
      */
     unsigned dl() const;
 
     /** 
      * Operator przypisania.
-     * Standardowy operator przypisania, tworzy g³êbok± kopiê ci±gu.
+     * Standardowy operator przypisania, tworzy gÅ‚Ä™bokÄ… kopiÄ™ ciÄ…gu.
      * 
-     * @param inny Ci±g do skopiowania.
+     * @param inny CiÄ…g do skopiowania.
      * 
-     * @return Ten ci±g.
+     * @return Ten ciÄ…g.
      */
     ciag& operator =(const ciag& inny);
     /** 
      * Operator konkatenacji.
-     * Dodaje na koniec tego ci±gu znaków inny, podany w parametrze.
-     * Oryginalny ci±g zostanie nienaruszony.
+     * Dodaje na koniec tego ciÄ…gu znakÃ³w inny, podany w parametrze.
+     * Oryginalny ciÄ…g zostanie nienaruszony.
      * 
-     * @param inny Ci±g znaków, jaki zostanie dodany.
+     * @param inny CiÄ…g znakÃ³w, jaki zostanie dodany.
      * 
-     * @return Ten ci±g.
+     * @return Ten ciÄ…g.
      */
     ciag& operator +=(const ciag& inny);
     /** 
-     * Operator rzutowania na ci±g znaków C.
-     * Nie istnieje mo¿liwo¶æ modyfikacji zwracanego ci±gu.
+     * Operator rzutowania na ciÄ…g znakÃ³w C.
+     * Nie istnieje moÅ¼liwoÅ›Ä‡ modyfikacji zwracanego ciÄ…gu.
      * 
-     * @return Reprezentacja tego ci±gu jako ciagu znaków jêzyka C.
+     * @return Reprezentacja tego ciÄ…gu jako ciagu znakÃ³w jÄ™zyka C.
      */
     operator const char*() const;
 
     /** 
-     * Zwraca ilo¶æ istniej±cych obiektów typu ciag.
+     * Zwraca iloÅ›Ä‡ istniejÄ…cych obiektÃ³w typu ciag.
      *  
-     * @return Ilo¶æ istniej±cych obiektów typu ci±g.
+     * @return IloÅ›Ä‡ istniejÄ…cych obiektÃ³w typu ciÄ…g.
      */
     static unsigned ile();
 
@@ -95,34 +95,34 @@ private:
 };
 
 /** 
- * Operator konkatenacji dwóch ci±gów.
- * Wynikiem jest ci±g sk³adaj±cy siê z dwóch ci±gów podanych w parametrach, jeden za drugim.
+ * Operator konkatenacji dwÃ³ch ciÄ…gÃ³w.
+ * Wynikiem jest ciÄ…g skÅ‚adajÄ…cy siÄ™ z dwÃ³ch ciÄ…gÃ³w podanych w parametrach, jeden za drugim.
  * Operator NIE jest przemienny!
  * 
- * @param str1 Pierwszy ci±g do konkatenacji.
- * @param str2 Drugi ci±g do konkatenacji.
+ * @param str1 Pierwszy ciÄ…g do konkatenacji.
+ * @param str2 Drugi ciÄ…g do konkatenacji.
  * 
- * @return Wynikowy ci±g znaków.
+ * @return Wynikowy ciÄ…g znakÃ³w.
  */
 ciag operator+(const ciag& str1, const ciag& str2);
 /** 
- * Standardowy operator wczytywania ci±gu znaków ze strumienia.
- * Zachowuje siê podobnie, jak operator dla ci±gu jêzyka C, tzn. ka¿dy bia³y znak
+ * Standardowy operator wczytywania ciÄ…gu znakÃ³w ze strumienia.
+ * Zachowuje siÄ™ podobnie, jak operator dla ciÄ…gu jÄ™zyka C, tzn. kaÅ¼dy biaÅ‚y znak
  * przerywa wczytywanie.
  * 
- * @param is Strumieñ, z którego zostanie wczytany ci±g.
- * @param cg Ci±g, który zostanie wczytany.
+ * @param is StrumieÅ„, z ktÃ³rego zostanie wczytany ciÄ…g.
+ * @param cg CiÄ…g, ktÃ³ry zostanie wczytany.
  * 
- * @return Strumieñ po wczytaniu z niego ci±gu.
+ * @return StrumieÅ„ po wczytaniu z niego ciÄ…gu.
  */
 std::istream& operator>>(std::istream& is, ciag& cg);
 /** 
- * Standardowy operator wypisania ci±gu znaków na strumieñ.
- * Zachowuje siê identycznie jak operator dla ci±gu jêzyka C.
+ * Standardowy operator wypisania ciÄ…gu znakÃ³w na strumieÅ„.
+ * Zachowuje siÄ™ identycznie jak operator dla ciÄ…gu jÄ™zyka C.
  * 
- * @param os Strumieñ, na który zostanie wypisany ci±g znaków.
- * @param cg Ci±g znaków do wypisania.
+ * @param os StrumieÅ„, na ktÃ³ry zostanie wypisany ciÄ…g znakÃ³w.
+ * @param cg CiÄ…g znakÃ³w do wypisania.
  * 
- * @return Strumieñ po wypisaniu na niego ci±gu znaków.
+ * @return StrumieÅ„ po wypisaniu na niego ciÄ…gu znakÃ³w.
  */
 std::ostream& operator<<(std::ostream& os, const ciag& cg);

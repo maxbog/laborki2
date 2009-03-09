@@ -1,4 +1,4 @@
-﻿// -*- mode: C++ -*-
+// -*- mode: C++ -*-
 /**
  * @file macierz.h
  * @author Maksymilian Boguń
