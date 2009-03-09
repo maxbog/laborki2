@@ -115,7 +115,7 @@ ciag operator+(const ciag& str1, const ciag& str2);
  * 
  * @return Strumień po wczytaniu z niego ciągu.
  */
-std::istream& operator>>(std::istream& is, ciag& cg);
+std::istream& operator >>(std::istream& is, ciag& cg);
 /** 
  * Standardowy operator wypisania ciągu znaków na strumień.
  * Zachowuje się identycznie jak operator dla ciągu języka C.
@@ -125,4 +125,4 @@ std::istream& operator>>(std::istream& is, ciag& cg);
  * 
  * @return Strumień po wypisaniu na niego ciągu znaków.
  */
-std::ostream& operator<<(std::ostream& os, const ciag& cg);
+std::ostream& operator <<(std::ostream& os, const ciag& cg);
