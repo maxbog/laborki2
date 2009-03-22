@@ -258,7 +258,7 @@ macierz macierz::odwroc() const {
 
     
     if(std::fabs(wyzn) < std::numeric_limits<double>::epsilon()) {
-        throw std::runtime_error("Dzielenie przez 0!");
+        throw std::runtime_error("Zerowy wyznacznik!");
     }
   
     macierz wynik(_wiersze, _kolumny);
