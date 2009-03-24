@@ -65,6 +65,11 @@ int main() {
     ss >> A1 >> A2;
     cout << A1*A2;
     cout << "Wynik jest prawidlowy, sprawdzone przy uzyciu Mathematica :)" << endl;
+
+    macierz K;
+    cout << "Wprowadz macierz: ";
+    cin >> K;
+    cout << K << K * macierz::stworz_jedynkowa(K);
     
     return 0;
 }
