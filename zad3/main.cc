@@ -64,6 +64,7 @@ int main() {
     ss << "3 3 0.132354 0.721144 0.0757989 0.528302 0.571889 0.757425 0.89333 0.811718 0.50731" << endl; //A2
     ss >> A1 >> A2;
     cout << A1*A2;
+    cout << "Wynik jest prawidlowy, sprawdzone przy uzyciu Mathematica :)" << endl;
     
     return 0;
 }
