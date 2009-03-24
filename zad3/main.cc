@@ -5,6 +5,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include "macierz.h"
 
 using namespace std;
@@ -56,5 +57,13 @@ int main() {
     } catch (out_of_range o) {
       cout << "Blad: " << o.what() << endl;
     }
+
+    macierz A1,A2;
+    stringstream ss;
+    ss << "3 3 0.842566 0.0119543 0.157427 0.637154 0.725044 0.230494 0.19684 0.499382 0.536919" << endl; // A1
+    ss << "3 3 0.132354 0.721144 0.0757989 0.528302 0.571889 0.757425 0.89333 0.811718 0.50731" << endl; //A2
+    ss >> A1 >> A2;
+    cout << A1*A2;
+    
     return 0;
 }
