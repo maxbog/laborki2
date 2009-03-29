@@ -1,3 +1,9 @@
+/**
+ * @file tab_complex.cc
+ * @author Maksymilian Boguń
+ * @date 29-3-2009
+ */
+
 #include "tab_complex.h"
 
 tab_complex::tab_complex() {

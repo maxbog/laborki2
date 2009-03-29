@@ -1,3 +1,9 @@
+/**
+ * @file complex.cc
+ * @author Maksymilian Boguń
+ * @date 29-3-2009
+ */
+
 #include <cmath>
 
 #include "complex.h"
