@@ -97,7 +97,7 @@ macierz macierz::operator *(double rhs) const {
 }
 
 macierz macierz::operator *(const macierz& rhs) const {
-    if(_wiersze != rhs._kolumny) {
+    if(_kolumny != rhs._wiersze) {
         throw size_error("Macierze nie mogą być przemnożone: nieodpowiednie wymiary");
     }
     
